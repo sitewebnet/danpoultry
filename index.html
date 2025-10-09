@@ -3,57 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Poultry | Chick Sales & Egg Incubation</title>
+    <title>Spec Compshac Poultry</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">Premium<span>Poultry</span></a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
+        <div class="container navbar">
+            <a href="#" class="logo">Spec<span>Compshac</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#welcome">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Elburgon Premium Poultry Solutions</h1>
-                    <p class="tagline">Natural & Quality Products</p>
-                    <p>Your trusted partner for quality chicks and professional egg incubation services. We provide the highest quality poultry products with a commitment to excellence.</p>
-                    <div class="hero-buttons">
-                        <a href="#services" class="btn btn-primary">Our Services</a>
-                    </div>
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Spec Compshac Poultry</h1>
+                <p class="tagline">Your trusted partner in poultry excellence.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
                 </div>
-                <div class="hero-image">
-                    <img src="images/chick.png" alt="Healthy chicks - Elburgon Poultry">
-                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Poultry Farm">
             </div>
         </div>
     </section>
 
     <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="container">
-            <h2>Welcome</h2>
-            <div class="welcome-content">
-                <p>Welcome to <strong>Elburgon Poultry</strong> your trusted hatchery for <strong>quality day-old chicks</strong> and <strong>professional egg incubation services</strong>. We are dedicated to helping farmers grow thriving poultry businesses through reliable supply, expert incubation, and personalized customer support.</p>
-            </div>
+    <section class="welcome" id="welcome">
+        <div class="container welcome-content">
+            <h2>Welcome to Spec Compshac Poultry</h2>
+            <p>At Spec Compshac Poultry, we pride ourselves on providing top-quality chicks, incubation services, and expert consultation to help your poultry business grow.</p>
         </div>
     </section>
 
@@ -64,234 +56,154 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/chicks.png" alt="Chick Sales">
+                        <img src="images/chicks.jpg" alt="Day-old chicks">
                     </div>
                     <div class="service-content">
-                        <h3>Chick Sales</h3>
-                        <p>We offer high-quality day-old chicks in large quantities for commercial poultry farming.</p>
-                        <ul>
-                            <li>Healthy, vaccinated chicks</li>
-                            <li>Various breeds available</li>
-                            <li>Bulk order discounts</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline chick-order-trigger">Order Chicks</a>
+                        <h3>Order Day-Old Chicks</h3>
+                        <p>High-quality, healthy chicks ready to boost your poultry business.</p>
+                        <button class="btn btn-primary open-form" data-form="orderForm">Order Now</button>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/incubation.png" alt="Egg Incubation">
+                        <img src="images/incubation.jpg" alt="Incubation Service">
                     </div>
                     <div class="service-content">
-                        <h3>Egg Incubation</h3>
-                        <p>Professional incubation services with state-of-the-art equipment and high hatch rates.</p>
-                        <ul>
-                            <li>Temperature-controlled environment</li>
-                            <li>Regular monitoring</li>
-                            <li>High success rate</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline incubation-order-trigger">Request Incubation</a>
+                        <h3>Incubation Service</h3>
+                        <p>Reliable hatching services for your fertile eggs.</p>
+                        <button class="btn btn-primary open-form" data-form="incubationForm">Book Service</button>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                         <img src="images/consultancy.png" alt="Poultry Consultation">
+                        <img src="images/consultation.jpg" alt="Consultation Service">
                     </div>
                     <div class="service-content">
-                        <h3>Consultation</h3>
-                        <p>Expert advice on poultry farming, disease management, and best practices.</p>
-                        <ul>
-                            <li>Farm setup guidance</li>
-                            <li>Disease prevention</li>
-                            <li>Maximize productivity</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline consultation-trigger">Contact Us</a>
+                        <h3>Poultry Consultation</h3>
+                        <p>Expert advice to improve productivity and profitability.</p>
+                        <button class="btn btn-primary open-form" data-form="consultationForm">Consult Now</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Forms Section (Hidden by default) -->
-    <section class="forms-section" id="forms">
+    <!-- Forms Section -->
+    <section class="forms-section" id="formsSection">
         <div class="container">
             <div class="forms-header">
-                <h2 id="form-title">Order Our Services</h2>
+                <h2>Service Request Form</h2>
                 <button class="close-forms">&times;</button>
             </div>
+
             <div class="form-container">
                 <!-- Chick Order Form -->
-                <div class="form-box" id="chick-order-form-container">
-                    <h3>Chick Order Form</h3>
-                    <form id="chick-order-form" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Chick Order Request">
-                        <input type="hidden" name="_template" value="table">
+                <div class="form-box" id="orderForm">
+                    <h3>Order Day-Old Chicks</h3>
+                    <form class="serviceForm" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="">
-                        
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Chick Order Request from Website">
+
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="nameOrder">Full Name</label>
+                            <input type="text" name="name" id="nameOrder" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="emailOrder">Email</label>
+                            <input type="email" name="email" id="emailOrder" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <label for="quantityOrder">Number of Chicks</label>
+                            <input type="number" name="quantity" id="quantityOrder" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="chick-quantity">Quantity of Chicks</label>
-                            <select id="chick-quantity" name="chick-quantity" class="form-control" required>
-                                <option value="">Select Quantity</option>
-                                <option value="100-500">100 - 500</option>
-                                <option value="500-1000">500 - 1,000</option>
-                                <option value="1000-5000">1,000 - 5,000</option>
-                                <option value="5000+">5,000+ (Custom Order)</option>
-                            </select>
+                            <label for="messageOrder">Additional Details</label>
+                            <textarea name="message" id="messageOrder" class="form-control"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="chick-breed">Preferred Breed</label>
-                            <select id="chick-breed" name="chick-breed" class="form-control" required>
-                                <option value="">Select Breed</option>
-                                <option value="broiler">Broiler</option>
-                                <option value="layer">Layer</option>
-                                <option value="dual-purpose">Dual Purpose</option>
-                                <option value="other">Other (Specify in message)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="delivery-date">Preferred Delivery Date</label>
-                            <input type="date" id="delivery-date" name="delivery-date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Additional Information</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Any special requirements or questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Order</button>
+
+                        <button type="submit" class="btn btn-primary">Send Order</button>
                     </form>
                 </div>
-                
-                <!-- Incubation Service Form -->
-                <div class="form-box" id="incubation-form-container">
+
+                <!-- Incubation Form -->
+                <div class="form-box" id="incubationForm">
                     <h3>Incubation Service Request</h3>
-                    <form id="incubation-form" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Incubation Service Request">
-                        <input type="hidden" name="_template" value="table">
+                    <form class="serviceForm" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="">
-                        
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Incubation Request from Website">
+
                         <div class="form-group">
-                            <label for="inc-name">Full Name</label>
-                            <input type="text" id="inc-name" name="name" class="form-control" required>
+                            <label for="nameIncubation">Full Name</label>
+                            <input type="text" name="name" id="nameIncubation" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="inc-email">Email Address</label>
-                            <input type="email" id="inc-email" name="email" class="form-control" required>
+                            <label for="emailIncubation">Email</label>
+                            <input type="email" name="email" id="emailIncubation" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="inc-phone">Phone Number</label>
-                            <input type="tel" id="inc-phone" name="phone" class="form-control" required>
+                            <label for="eggsIncubation">Number of Eggs</label>
+                            <input type="number" name="eggs" id="eggsIncubation" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="egg-quantity">Quantity of Eggs</label>
-                            <select id="egg-quantity" name="egg-quantity" class="form-control" required>
-                                <option value="">Select Quantity</option>
-                                <option value="100-500">100 - 500</option>
-                                <option value="500-1000">500 - 1,000</option>
-                                <option value="1000-5000">1,000 - 5,000</option>
-                                <option value="5000+">5,000+ (Custom Order)</option>
-                            </select>
+                            <label for="messageIncubation">Additional Details</label>
+                            <textarea name="message" id="messageIncubation" class="form-control"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="egg-type">Egg Type</label>
-                            <select id="egg-type" name="egg-type" class="form-control" required>
-                                <option value="">Select Egg Type</option>
-                                <option value="chicken">Chicken</option>
-                                <option value="duck">Duck</option>
-                                <option value="turkey">Turkey</option>
-                                <option value="quail">Quail</option>
-                                <option value="other">Other (Specify in message)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="dropoff-date">Preferred Drop-off Date</label>
-                            <input type="date" id="dropoff-date" name="dropoff-date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="inc-message">Additional Information</label>
-                            <textarea id="inc-message" name="message" class="form-control" placeholder="Any special requirements or questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Request</button>
+
+                        <button type="submit" class="btn btn-primary">Send Request</button>
                     </form>
                 </div>
-                
+
                 <!-- Consultation Form -->
-                <div class="form-box" id="consultation-form-container">
-                    <h3>Consultation Request</h3>
-                    <form id="consultation-form" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Consultation Request">
-                        <input type="hidden" name="_template" value="table">
+                <div class="form-box" id="consultationForm">
+                    <h3>Poultry Consultation Request</h3>
+                    <form class="serviceForm" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="">
-                        
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Consultation Request from Website">
+
                         <div class="form-group">
-                            <label for="consult-name">Full Name</label>
-                            <input type="text" id="consult-name" name="name" class="form-control" required>
+                            <label for="nameConsult">Full Name</label>
+                            <input type="text" name="name" id="nameConsult" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="consult-email">Email Address</label>
-                            <input type="email" id="consult-email" name="email" class="form-control" required>
+                            <label for="emailConsult">Email</label>
+                            <input type="email" name="email" id="emailConsult" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="consult-phone">Phone Number</label>
-                            <input type="tel" id="consult-phone" name="phone" class="form-control" required>
+                            <label for="topicConsult">Consultation Topic</label>
+                            <input type="text" name="topic" id="topicConsult" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="farm-size">Farm Size</label>
-                            <select id="farm-size" name="farm-size" class="form-control" required>
-                                <option value="">Select Farm Size</option>
-                                <option value="small">Small (Under 500 birds)</option>
-                                <option value="medium">Medium (500-5,000 birds)</option>
-                                <option value="large">Large (5,000+ birds)</option>
-                                <option value="planning">Planning Stage</option>
-                            </select>
+                            <label for="messageConsult">Message</label>
+                            <textarea name="message" id="messageConsult" class="form-control"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="consultation-type">Type of Consultation Needed</label>
-                            <select id="consultation-type" name="consultation-type" class="form-control" required>
-                                <option value="">Select Consultation Type</option>
-                                <option value="setup">Farm Setup</option>
-                                <option value="disease">Disease Management</option>
-                                <option value="nutrition">Nutrition & Feeding</option>
-                                <option value="breeding">Breeding & Genetics</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="preferred-date">Preferred Consultation Date</label>
-                            <input type="date" id="preferred-date" name="preferred-date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="consult-message">Describe Your Needs</label>
-                            <textarea id="consult-message" name="message" class="form-control" placeholder="Please describe your poultry farming needs and any specific challenges you're facing..." rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Request Consultation</button>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Success/Error Messages -->
-    <div id="message-popup" class="message-popup">
+
+    <!-- Message Popup -->
+    <div class="message-popup" id="messagePopup">
         <div class="message-content">
-            <span class="close-message">&times;</span>
-            <div class="message-icon">
-                <i class="fas fa-check-circle success-icon"></i>
-                <i class="fas fa-exclamation-circle error-icon"></i>
-            </div>
-            <h3 id="message-title">Success!</h3>
-            <p id="message-text">Your message has been sent successfully.</p>
+            <span class="close-message" id="closeMessage">&times;</span>
+            <div class="message-icon success-icon">&#10004;</div>
+            <div class="message-icon error-icon">&#10008;</div>
+            <h3 id="message-title"></h3>
+            <p id="message-text"></p>
         </div>
     </div>
 
@@ -301,80 +213,58 @@
             <h2>Our Gallery</h2>
             <div class="gallery-container">
                 <div class="slideshow">
-                    <div class="slide active">
-                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D" alt="Poultry Farm">
-                        <div class="slide-caption">Our Modern Poultry Farm Facilities</div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1546272989-40c92939c6c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tzfGVufDB8fDB8fHww" alt="Day Old Chicks">
-                        <div class="slide-caption">Healthy Day-Old Chicks Ready for Delivery</div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpY2tzfGVufDB8fDB8fHww" alt="Incubation Equipment">
-                        <div class="slide-caption">State-of-the-Art Incubation Equipment</div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1750008627646-89a321df6ed8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGtlbnlhbiUyMGNoaWNrcyUyMGZhcm18ZW58MHx8MHx8fDA%3D" alt="Egg Hatching">
-                        <div class="slide-caption">Successful Hatching Process</div>
-                    </div>
+                    <div class="slide active"><img src="images/gallery1.jpg" alt=""><div class="slide-caption">Healthy Chicks</div></div>
+                    <div class="slide"><img src="images/gallery2.jpg" alt=""><div class="slide-caption">Modern Hatchery</div></div>
+                    <div class="slide"><img src="images/gallery3.jpg" alt=""><div class="slide-caption">Farm Operations</div></div>
                 </div>
                 <div class="gallery-controls">
-                    <button class="gallery-btn prev-btn"><i class="fas fa-chevron-left"></i> Previous</button>
-                    <button class="gallery-btn next-btn">Next <i class="fas fa-chevron-right"></i></button>
+                    <button class="gallery-btn" id="prev">Prev</button>
+                    <button class="gallery-btn" id="next">Next</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Premium Poultry</h3>
-                    <p>Your trusted partner for quality chicks and professional egg incubation services.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Elburgon, Nakuru County</p>
-                    <p><i class="fas fa-phone"></i> +254 714 634508</p>
-                    <p><i class="fas fa-envelope"></i> dan@gmail.com</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-column">
-                    <h3>Business Hours</h3>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p>Saturday: 9:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
+            <h2>Contact Us</h2>
+            <p style="text-align:center;">Have any questions or need help? Reach out to us anytime!</p>
+            <div style="text-align:center; margin-top:20px;">
+                <p>Email: spec.compshac@gmail.com</p>
+                <p>Phone: +234 XXX XXX XXXX</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Spec Compshac Poultry is dedicated to providing quality poultry products and services to farmers and businesses.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 Elburgon Premium Poultry. All rights reserved. | Privacy Policy</p>
-            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Spec Compshac Poultry. All rights reserved.
         </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
