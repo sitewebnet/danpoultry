@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Poultry | Chick Sales & Egg Incubation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Premium<span>Poultry</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Premium Poultry Solutions</h1>
+                    <p class="tagline">Natural & Quality Products</p>
+                    <p>Your trusted partner for quality chicks and professional egg incubation services. We provide the highest quality poultry products with a commitment to excellence.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/chick.png" alt="Healthy chicks - Elburgon Poultry">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <h2>Welcome</h2>
+            <div class="welcome-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Favore et vestibulum malesuada litoris. Aenean commercijit blandit massa. Muitat nunc odio, gombei, sit, cursus nisi. Duis dill enim pharet nostrud erat. Dolor euismod tincidunt ut labore et dolore magna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Matur liberum quis dictum magna. Sed lobortis abraum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/chicks.png" alt="Chick Sales">
+                    </div>
+                    <div class="service-content">
+                        <h3>Chick Sales</h3>
+                        <p>We offer high-quality day-old chicks in large quantities for commercial poultry farming.</p>
+                        <ul>
+                            <li>Healthy, vaccinated chicks</li>
+                            <li>Various breeds available</li>
+                            <li>Bulk order discounts</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline chick-order-trigger">Order Chicks</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/incubation.png" alt="Egg Incubation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Egg Incubation</h3>
+                        <p>Professional incubation services with state-of-the-art equipment and high hatch rates.</p>
+                        <ul>
+                            <li>Temperature-controlled environment</li>
+                            <li>Regular monitoring</li>
+                            <li>High success rate</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline incubation-order-trigger">Request Incubation</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                         <img src="images/consultancy.png" alt="Poultry Consultation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Consultation</h3>
+                        <p>Expert advice on poultry farming, disease management, and best practices.</p>
+                        <ul>
+                            <li>Farm setup guidance</li>
+                            <li>Disease prevention</li>
+                            <li>Maximize productivity</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline consultation-trigger">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section (Hidden by default) -->
+    <section class="forms-section" id="forms">
+        <div class="container">
+            <div class="forms-header">
+                <h2 id="form-title">Order Our Services</h2>
+                <button class="close-forms">&times;</button>
+            </div>
+            <div class="form-container">
+                <!-- Chick Order Form -->
+                <div class="form-box" id="chick-order-form-container">
+                    <h3>Chick Order Form</h3>
+                    <form id="chick-order-form" action="https://formsubmit.co/ipeterkg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Chick Order Request">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="chick-quantity">Quantity of Chicks</label>
+                            <select id="chick-quantity" name="chick-quantity" class="form-control" required>
+                                <option value="">Select Quantity</option>
+                                <option value="100-500">100 - 500</option>
+                                <option value="500-1000">500 - 1,000</option>
+                                <option value="1000-5000">1,000 - 5,000</option>
+                                <option value="5000+">5,000+ (Custom Order)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="chick-breed">Preferred Breed</label>
+                            <select id="chick-breed" name="chick-breed" class="form-control" required>
+                                <option value="">Select Breed</option>
+                                <option value="broiler">Broiler</option>
+                                <option value="layer">Layer</option>
+                                <option value="dual-purpose">Dual Purpose</option>
+                                <option value="other">Other (Specify in message)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-date">Preferred Delivery Date</label>
+                            <input type="date" id="delivery-date" name="delivery-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Any special requirements or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Order</button>
+                    </form>
+                </div>
+                
+                <!-- Incubation Service Form -->
+                <div class="form-box" id="incubation-form-container">
+                    <h3>Incubation Service Request</h3>
+                    <form id="incubation-form" action="https://formsubmit.co/ipeterkg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Incubation Service Request">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+                        
+                        <div class="form-group">
+                            <label for="inc-name">Full Name</label>
+                            <input type="text" id="inc-name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inc-email">Email Address</label>
+                            <input type="email" id="inc-email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inc-phone">Phone Number</label>
+                            <input type="tel" id="inc-phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="egg-quantity">Quantity of Eggs</label>
+                            <select id="egg-quantity" name="egg-quantity" class="form-control" required>
+                                <option value="">Select Quantity</option>
+                                <option value="100-500">100 - 500</option>
+                                <option value="500-1000">500 - 1,000</option>
+                                <option value="1000-5000">1,000 - 5,000</option>
+                                <option value="5000+">5,000+ (Custom Order)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="egg-type">Egg Type</label>
+                            <select id="egg-type" name="egg-type" class="form-control" required>
+                                <option value="">Select Egg Type</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="duck">Duck</option>
+                                <option value="turkey">Turkey</option>
+                                <option value="quail">Quail</option>
+                                <option value="other">Other (Specify in message)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoff-date">Preferred Drop-off Date</label>
+                            <input type="date" id="dropoff-date" name="dropoff-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inc-message">Additional Information</label>
+                            <textarea id="inc-message" name="message" class="form-control" placeholder="Any special requirements or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                </div>
+                
+                <!-- Consultation Form -->
+                <div class="form-box" id="consultation-form-container">
+                    <h3>Consultation Request</h3>
+                    <form id="consultation-form" action="https://formsubmit.co/ipeterkg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Consultation Request">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+                        
+                        <div class="form-group">
+                            <label for="consult-name">Full Name</label>
+                            <input type="text" id="consult-name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-email">Email Address</label>
+                            <input type="email" id="consult-email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-phone">Phone Number</label>
+                            <input type="tel" id="consult-phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="farm-size">Farm Size</label>
+                            <select id="farm-size" name="farm-size" class="form-control" required>
+                                <option value="">Select Farm Size</option>
+                                <option value="small">Small (Under 500 birds)</option>
+                                <option value="medium">Medium (500-5,000 birds)</option>
+                                <option value="large">Large (5,000+ birds)</option>
+                                <option value="planning">Planning Stage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation-type">Type of Consultation Needed</label>
+                            <select id="consultation-type" name="consultation-type" class="form-control" required>
+                                <option value="">Select Consultation Type</option>
+                                <option value="setup">Farm Setup</option>
+                                <option value="disease">Disease Management</option>
+                                <option value="nutrition">Nutrition & Feeding</option>
+                                <option value="breeding">Breeding & Genetics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Consultation Date</label>
+                            <input type="date" id="preferred-date" name="preferred-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consult-message">Describe Your Needs</label>
+                            <textarea id="consult-message" name="message" class="form-control" placeholder="Please describe your poultry farming needs and any specific challenges you're facing..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Request Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success/Error Messages -->
+    <div id="message-popup" class="message-popup">
+        <div class="message-content">
+            <span class="close-message">&times;</span>
+            <div class="message-icon">
+                <i class="fas fa-check-circle success-icon"></i>
+                <i class="fas fa-exclamation-circle error-icon"></i>
+            </div>
+            <h3 id="message-title">Success!</h3>
+            <p id="message-text">Your message has been sent successfully.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Our Gallery</h2>
+            <div class="gallery-container">
+                <div class="slideshow">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Poultry Farm">
+                        <div class="slide-caption">Our Modern Poultry Farm Facilities</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1589923186203-2e57bd442e35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Day Old Chicks">
+                        <div class="slide-caption">Healthy Day-Old Chicks Ready for Delivery</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Incubation Equipment">
+                        <div class="slide-caption">State-of-the-Art Incubation Equipment</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Egg Hatching">
+                        <div class="slide-caption">Successful Hatching Process</div>
+                    </div>
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-btn prev-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <button class="gallery-btn next-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Premium Poultry</h3>
+                    <p>Your trusted partner for quality chicks and professional egg incubation services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Poultry Farm Road, Agriculture City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@premiumpoultry.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Premium Poultry. All rights reserved. | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
