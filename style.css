@@ -256,11 +256,13 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    height: 400px; 
 }
 
 .welcome-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: var(--transition);
 }
@@ -828,3 +830,4 @@ footer {
         max-width: 200px;
     }
 }
+
