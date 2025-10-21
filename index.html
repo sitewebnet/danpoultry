@@ -34,7 +34,9 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Kimchick Ukulima Ventures</h1>
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Kimchick Ukulima Ventures Logo">
+                    </div>
                     <p class="tagline">Natural & Quality Products</p>
                     <p>Your trusted partner for quality chicks and professional egg incubation services. We provide the highest quality poultry products with a commitment to excellence.</p>
                     <div class="hero-buttons">
@@ -53,7 +55,12 @@
         <div class="container">
             <h2>Welcome</h2>
             <div class="welcome-content">
-                <p>Welcome to <strong>Kimchick Ukulima Ventures</strong> your trusted hatchery for <strong>quality day-old chicks</strong> and <strong>professional egg incubation services</strong>. We are dedicated to helping farmers grow thriving poultry businesses through reliable supply, expert incubation, and personalized customer support.</p>
+                <div class="welcome-image">
+                    <img src="images/welcome-image.jpg" alt="Our Poultry Farm">
+                </div>
+                <div class="welcome-text">
+                    <p>Welcome to <strong>Kimchick Ukulima Ventures</strong> your trusted hatchery for <strong>quality day-old chicks</strong> and <strong>professional egg incubation services</strong>. We are dedicated to helping farmers grow thriving poultry businesses through reliable supply, expert incubation, and personalized customer support.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -91,6 +98,22 @@
                             <li>High success rate</li>
                         </ul>
                         <a href="#forms" class="btn btn-outline incubation-order-trigger">Request Incubation</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/brooding.png" alt="Brooding Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Brooding Services</h3>
+                        <p>Professional brooding services to ensure your chicks get the best start in life.</p>
+                        <ul>
+                            <li>Temperature-controlled brooding</li>
+                            <li>Expert care and monitoring</li>
+                            <li>Disease prevention</li>
+                            <li>Optimal growth conditions</li>
+                        </ul>
+                        <a href="#forms" class="btn btn-outline brooding-order-trigger">Request Brooding</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -227,6 +250,59 @@
                     </form>
                 </div>
                 
+                <!-- Brooding Form -->
+                <div class="form-box" id="brooding-form-container">
+                    <h3>Brooding Service Request</h3>
+                    <form id="brooding-form" action="https://formsubmit.co/spec.compshac@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Brooding Service Request">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+                        
+                        <div class="form-group">
+                            <label for="brooding-name">Full Name</label>
+                            <input type="text" id="brooding-name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="brooding-email">Email Address</label>
+                            <input type="email" id="brooding-email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="brooding-phone">Phone Number</label>
+                            <input type="tel" id="brooding-phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="chick-count">Number of Chicks</label>
+                            <select id="chick-count" name="chick-count" class="form-control" required>
+                                <option value="">Select Quantity</option>
+                                <option value="100-500">100 - 500</option>
+                                <option value="500-1000">500 - 1,000</option>
+                                <option value="1000-5000">1,000 - 5,000</option>
+                                <option value="5000+">5,000+ (Custom Order)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="brooding-period">Preferred Brooding Period (Weeks)</label>
+                            <select id="brooding-period" name="brooding-period" class="form-control" required>
+                                <option value="">Select Period</option>
+                                <option value="1-2">1-2 Weeks</option>
+                                <option value="3-4">3-4 Weeks</option>
+                                <option value="5-6">5-6 Weeks</option>
+                                <option value="custom">Custom Period</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="brooding-start">Preferred Start Date</label>
+                            <input type="date" id="brooding-start" name="brooding-start" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="brooding-message">Additional Requirements</label>
+                            <textarea id="brooding-message" name="message" class="form-control" placeholder="Any special requirements, breed specifications, or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                </div>
+                
                 <!-- Consultation Form -->
                 <div class="form-box" id="consultation-form-container">
                     <h3>Consultation Request</h3>
@@ -304,19 +380,19 @@
             <div class="gallery-container">
                 <div class="slideshow">
                     <div class="slide active">
-                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500" alt="Poultry Farm">
+                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800" alt="Poultry Farm">
                         <div class="slide-caption">Our Modern Poultry Farm Facilities</div>
                     </div>
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1546272989-40c92939c6c2?w=500" alt="Day Old Chicks">
+                        <img src="https://images.unsplash.com/photo-1546272989-40c92939c6c2?w=800" alt="Day Old Chicks">
                         <div class="slide-caption">Healthy Day-Old Chicks Ready for Delivery</div>
                     </div>
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?w=500" alt="Incubation Equipment">
+                        <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?w=800" alt="Incubation Equipment">
                         <div class="slide-caption">State-of-the-Art Incubation Equipment</div>
                     </div>
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1750008627646-89a321df6ed8?w=500" alt="Egg Hatching">
+                        <img src="https://images.unsplash.com/photo-1750008627646-89a321df6ed8?w=800" alt="Egg Hatching">
                         <div class="slide-caption">Successful Hatching Process</div>
                     </div>
                 </div>
@@ -410,7 +486,3 @@
     </script>
 </body>
 </html>
-
-
-
-
