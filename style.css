@@ -274,11 +274,6 @@ header {
 .welcome-text {
     padding: 20px;
 }
-.welcome-text p {
-    text-align: left;
-    line-height: 1.9;
-    margin-bottom: 20px;
-}
 /* Services Section */
 .services-grid {
     display: grid;
@@ -834,5 +829,6 @@ footer {
         max-width: 200px;
     }
 }
+
 
 
