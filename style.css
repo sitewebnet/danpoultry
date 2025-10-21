@@ -256,6 +256,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    position: realtive;
     height: 0;
     padding-bottom: 66.67%;
 }
@@ -268,12 +269,8 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: var(--transition);
 }
 
-.welcome-image:hover img {
-    transform: scale(0.5);
-}
 
 .welcome-text {
     padding: 10px;
@@ -281,6 +278,8 @@ header {
 .welcome-text p {
     line-height: 2.2;
     margin-bottom: 25px;
+}
+
 /* Services Section */
 .services-grid {
     display: grid;
@@ -836,6 +835,7 @@ footer {
         max-width: 200px;
     }
 }
+
 
 
 
