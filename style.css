@@ -272,8 +272,11 @@ header {
 }
 
 .welcome-text {
-    padding: 20px;
+    padding: 10px;
 }
+.welcome-text p {
+    line-height: 2.2;
+    margin-bottom: 25px;
 /* Services Section */
 .services-grid {
     display: grid;
@@ -829,6 +832,7 @@ footer {
         max-width: 200px;
     }
 }
+
 
 
 
