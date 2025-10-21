@@ -256,7 +256,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    position: realtive;
+    position: relative;
     height: 0;
     padding-bottom: 66.67%;
 }
@@ -835,6 +835,7 @@ footer {
         max-width: 200px;
     }
 }
+
 
 
 
