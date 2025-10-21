@@ -10,6 +10,7 @@ hamburger.addEventListener('click', () => {
 // Form Section Toggle
 const chickOrderTriggers = document.querySelectorAll('.chick-order-trigger');
 const incubationOrderTriggers = document.querySelectorAll('.incubation-order-trigger');
+const broodingOrderTriggers = document.querySelectorAll('.brooding-order-trigger');
 const consultationTriggers = document.querySelectorAll('.consultation-trigger');
 const formsSection = document.querySelector('.forms-section');
 const closeForms = document.querySelector('.close-forms');
@@ -17,6 +18,7 @@ const formTitle = document.getElementById('form-title');
 
 const chickForm = document.getElementById('chick-order-form-container');
 const incubationForm = document.getElementById('incubation-form-container');
+const broodingForm = document.getElementById('brooding-form-container');
 const consultationForm = document.getElementById('consultation-form-container');
 
 // Message Popup Elements
@@ -30,6 +32,7 @@ function showForm(formElement, title) {
     // Hide all forms first
     chickForm.classList.remove('active');
     incubationForm.classList.remove('active');
+    broodingForm.classList.remove('active');
     consultationForm.classList.remove('active');
     
     // Show the selected form
@@ -79,6 +82,14 @@ incubationOrderTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
         showForm(incubationForm, 'Request Incubation Service');
+    });
+});
+
+// Brooding order form triggers
+broodingOrderTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        showForm(broodingForm, 'Request Brooding Service');
     });
 });
 
@@ -171,4 +182,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
