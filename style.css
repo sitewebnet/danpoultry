@@ -256,10 +256,14 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    height: 400px; 
+    height: 0;
+    padding-bottom: 66.67%;
 }
 
 .welcome-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -268,7 +272,7 @@ header {
 }
 
 .welcome-image:hover img {
-    transform: scale(1.05);
+    transform: scale(0.5);
 }
 
 .welcome-text {
@@ -832,6 +836,7 @@ footer {
         max-width: 200px;
     }
 }
+
 
 
 
