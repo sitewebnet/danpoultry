@@ -27,8 +27,14 @@ const closeMessage = document.querySelector('.close-message');
 const messageTitle = document.getElementById('message-title');
 const messageText = document.getElementById('message-text');
 
+// Store current scroll position
+let scrollPosition = 0;
+
 // Function to show specific form
 function showForm(formElement, title) {
+    // Store current scroll position
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
     // Hide all forms first
     chickForm.classList.remove('active');
     incubationForm.classList.remove('active');
@@ -44,6 +50,9 @@ function showForm(formElement, title) {
     // Show the forms section
     formsSection.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Prevent default anchor behavior
+    return false;
 }
 
 // Function to show message popup
@@ -73,6 +82,7 @@ messagePopup.addEventListener('click', (e) => {
 chickOrderTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         showForm(chickForm, 'Order Chicks');
     });
 });
@@ -81,6 +91,7 @@ chickOrderTriggers.forEach(trigger => {
 incubationOrderTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         showForm(incubationForm, 'Request Incubation Service');
     });
 });
@@ -89,6 +100,7 @@ incubationOrderTriggers.forEach(trigger => {
 broodingOrderTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         showForm(broodingForm, 'Request Brooding Service');
     });
 });
@@ -97,6 +109,7 @@ broodingOrderTriggers.forEach(trigger => {
 consultationTriggers.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         showForm(consultationForm, 'Request Consultation');
     });
 });
@@ -105,6 +118,9 @@ consultationTriggers.forEach(trigger => {
 closeForms.addEventListener('click', () => {
     formsSection.classList.remove('active');
     document.body.style.overflow = 'auto';
+    
+    // Restore scroll position
+    window.scrollTo(0, scrollPosition);
 });
 
 // Close forms when clicking outside
@@ -112,6 +128,9 @@ formsSection.addEventListener('click', (e) => {
     if (e.target === formsSection) {
         formsSection.classList.remove('active');
         document.body.style.overflow = 'auto';
+        
+        // Restore scroll position
+        window.scrollTo(0, scrollPosition);
     }
 });
 
@@ -162,8 +181,16 @@ setInterval(() => {
     showSlide(currentSlide + 1);
 }, 5000);
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links (excluding form triggers)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Skip form trigger buttons
+    if (anchor.classList.contains('chick-order-trigger') || 
+        anchor.classList.contains('incubation-order-trigger') ||
+        anchor.classList.contains('brooding-order-trigger') ||
+        anchor.classList.contains('consultation-trigger')) {
+        return;
+    }
+    
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
