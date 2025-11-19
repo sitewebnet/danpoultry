@@ -1,11 +1,38 @@
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle - ENHANCED VERSION
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event bubbling
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
 
 // Form Section Toggle
 const chickOrderTriggers = document.querySelectorAll('.chick-order-trigger');
@@ -36,20 +63,28 @@ function showForm(formElement, title) {
     scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     
     // Hide all forms first
-    chickForm.classList.remove('active');
-    incubationForm.classList.remove('active');
-    broodingForm.classList.remove('active');
-    consultationForm.classList.remove('active');
+    if (chickForm) chickForm.classList.remove('active');
+    if (incubationForm) incubationForm.classList.remove('active');
+    if (broodingForm) broodingForm.classList.remove('active');
+    if (consultationForm) consultationForm.classList.remove('active');
     
     // Show the selected form
-    formElement.classList.add('active');
+    if (formElement) formElement.classList.add('active');
     
     // Update form title
-    formTitle.textContent = title;
+    if (formTitle) formTitle.textContent = title;
     
     // Show the forms section
-    formsSection.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    if (formsSection) {
+        formsSection.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Close mobile menu if open
+    if (hamburger && navLinks) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
     
     // Prevent default anchor behavior
     return false;
@@ -57,79 +92,114 @@ function showForm(formElement, title) {
 
 // Function to show message popup
 function showMessage(type, title, text) {
+    if (!messagePopup) return;
+    
     messagePopup.classList.remove('success', 'error');
     messagePopup.classList.add(type, 'active');
-    messageTitle.textContent = title;
-    messageText.textContent = text;
+    if (messageTitle) messageTitle.textContent = title;
+    if (messageText) messageText.textContent = text;
     document.body.style.overflow = 'hidden';
 }
 
 // Close message popup
-closeMessage.addEventListener('click', () => {
-    messagePopup.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
+if (closeMessage) {
+    closeMessage.addEventListener('click', () => {
+        if (messagePopup) messagePopup.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+}
 
 // Close message when clicking outside
-messagePopup.addEventListener('click', (e) => {
-    if (e.target === messagePopup) {
+if (messagePopup) {
+    messagePopup.addEventListener('click', (e) => {
+        if (e.target === messagePopup) {
+            messagePopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Close message on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && messagePopup && messagePopup.classList.contains('active')) {
         messagePopup.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 });
 
 // Chick order form triggers
-chickOrderTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        showForm(chickForm, 'Order Chicks');
+if (chickOrderTriggers.length > 0 && chickForm) {
+    chickOrderTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showForm(chickForm, 'Order Chicks');
+        });
     });
-});
+}
 
 // Incubation order form triggers
-incubationOrderTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        showForm(incubationForm, 'Request Incubation Service');
+if (incubationOrderTriggers.length > 0 && incubationForm) {
+    incubationOrderTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showForm(incubationForm, 'Request Incubation Service');
+        });
     });
-});
+}
 
 // Brooding order form triggers
-broodingOrderTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        showForm(broodingForm, 'Request Brooding Service');
+if (broodingOrderTriggers.length > 0 && broodingForm) {
+    broodingOrderTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showForm(broodingForm, 'Request Brooding Service');
+        });
     });
-});
+}
 
 // Consultation form triggers
-consultationTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        showForm(consultationForm, 'Request Consultation');
+if (consultationTriggers.length > 0 && consultationForm) {
+    consultationTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showForm(consultationForm, 'Request Consultation');
+        });
     });
-});
+}
 
 // Close forms
-closeForms.addEventListener('click', () => {
-    formsSection.classList.remove('active');
-    document.body.style.overflow = 'auto';
-    
-    // Restore scroll position
-    window.scrollTo(0, scrollPosition);
-});
-
-// Close forms when clicking outside
-formsSection.addEventListener('click', (e) => {
-    if (e.target === formsSection) {
+if (closeForms && formsSection) {
+    closeForms.addEventListener('click', () => {
         formsSection.classList.remove('active');
         document.body.style.overflow = 'auto';
         
         // Restore scroll position
+        window.scrollTo(0, scrollPosition);
+    });
+}
+
+// Close forms when clicking outside
+if (formsSection) {
+    formsSection.addEventListener('click', (e) => {
+        if (e.target === formsSection) {
+            formsSection.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Restore scroll position
+            window.scrollTo(0, scrollPosition);
+        }
+    });
+}
+
+// Close forms on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && formsSection && formsSection.classList.contains('active')) {
+        formsSection.classList.remove('active');
+        document.body.style.overflow = 'auto';
         window.scrollTo(0, scrollPosition);
     }
 });
@@ -141,6 +211,8 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
         form.addEventListener('submit', function() {
             const submitButton = this.querySelector('button[type="submit"]');
+            if (!submitButton) return;
+            
             const originalText = submitButton.textContent;
             
             // Show loading state
@@ -161,25 +233,63 @@ const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 let currentSlide = 0;
+let slideInterval;
 
 function showSlide(n) {
+    if (slides.length === 0) return;
+    
     slides.forEach(slide => slide.classList.remove('active'));
     currentSlide = (n + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
 }
 
-prevBtn.addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-});
+function startSlideshow() {
+    if (slides.length > 1) {
+        slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+    }
+}
 
-nextBtn.addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-});
+function stopSlideshow() {
+    if (slideInterval) {
+        clearInterval(slideInterval);
+    }
+}
 
-// Auto-advance slides every 5 seconds
-setInterval(() => {
-    showSlide(currentSlide + 1);
-}, 5000);
+// Initialize slideshow if elements exist
+if (slides.length > 0) {
+    // Show first slide
+    showSlide(0);
+    
+    // Start auto-advance
+    startSlideshow();
+    
+    // Pause on hover
+    const slideshow = document.querySelector('.slideshow');
+    if (slideshow) {
+        slideshow.addEventListener('mouseenter', stopSlideshow);
+        slideshow.addEventListener('mouseleave', startSlideshow);
+    }
+}
+
+// Previous button
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        stopSlideshow();
+        showSlide(currentSlide - 1);
+        startSlideshow();
+    });
+}
+
+// Next button
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        stopSlideshow();
+        showSlide(currentSlide + 1);
+        startSlideshow();
+    });
+}
 
 // Smooth scrolling for navigation links (excluding form triggers)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -204,8 +314,76 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             
             // Close mobile menu if open
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (hamburger && navLinks) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         }
     });
+});
+
+// Handle form submissions with FormSubmit
+document.querySelectorAll("form").forEach(form => {
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const submitButton = this.querySelector('button[type="submit"]');
+        
+        if (!submitButton) return;
+        
+        const originalText = submitButton.textContent;
+        submitButton.textContent = "Sending...";
+        submitButton.disabled = true;
+
+        try {
+            const res = await fetch(this.action, {
+                method: "POST",
+                body: formData
+            });
+            if (res.ok) {
+                showMessage("success", "Success!", "Your message has been sent successfully.");
+                this.reset();
+                
+                // Close forms section if open
+                if (formsSection && formsSection.classList.contains('active')) {
+                    formsSection.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    window.scrollTo(0, scrollPosition);
+                }
+            } else {
+                showMessage("error", "Error", "Failed to send your message. Please try again later.");
+            }
+        } catch (error) {
+            showMessage("error", "Error", "Something went wrong. Please check your connection and try again.");
+        }
+
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+});
+
+// Prevent right-click and view source
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+});
+
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
+        e.preventDefault();
+        alert("You are not allowed to copy content or view source!");
+    }
+});
+
+// Add loading state to the page
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
+// Handle window resize - close mobile menu on larger screens
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && hamburger && navLinks) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
 });
