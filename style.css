@@ -766,7 +766,7 @@ footer {
         #9c6b3a 50%, 
         #4CAF50 100%);
     color: white;
-    padding: 60px 0 30px;
+    padding: 30px 0 15px;
     position: relative;
     overflow: hidden;
 }
@@ -786,26 +786,28 @@ footer::before {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
 
 .footer-column h3 {
     color: white;
-    margin-bottom: 25px;
-    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .footer-column p, .footer-column a {
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     display: block;
     text-decoration: none;
     transition: var(--transition);
+    font-size: 0.9rem;
+    line-height: 1.4;    
 }
 
 .footer-column a:hover {
@@ -815,21 +817,22 @@ footer::before {
 
 .social-links {
     display: flex;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 6px;
     transition: var(--transition);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
 }
 
 .social-links a:hover {
@@ -840,9 +843,9 @@ footer::before {
 
 .copyright {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
     position: relative;
     z-index: 1;
@@ -1017,6 +1020,26 @@ footer::before {
     .welcome-text {
         padding: 10px;
     }
+    
+    footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-column h3 {
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+    }
+    
+    .footer-column p, .footer-column a {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }    
 }
 
 @media (max-width: 480px) {
@@ -1059,7 +1082,21 @@ footer::before {
     .logo-image img {
         max-width: 200px;
     }
+    footer {
+        padding: 25px 0 12px;
+    }
+    
+    .footer-content {
+        gap: 15px;
+    }
+    
+    .social-links a {
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+    }   
 }
+
 
 
 
