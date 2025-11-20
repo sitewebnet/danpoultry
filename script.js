@@ -1,10 +1,9 @@
-// Mobile Navigation Toggle - ENHANCED VERSION
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger && navLinks) {
     hamburger.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent event bubbling
+        e.stopPropagation(); 
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
@@ -361,7 +360,7 @@ document.querySelectorAll("form").forEach(form => {
         submitButton.disabled = false;
     });
 });
-// Phone number copy functionality - SIMPLIFIED WORKING VERSION
+// Phone number copy functionality
 function initializePhoneCopy() {
     const phoneElement = document.querySelector('.copy-phone');
     
@@ -496,4 +495,5 @@ window.addEventListener('resize', function() {
         navLinks.classList.remove('active');
     }
 });
+
 
