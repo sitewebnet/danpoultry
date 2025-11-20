@@ -287,7 +287,7 @@ header {
 
 /* Hero Logo Image */
 .logo-image {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
@@ -303,7 +303,8 @@ header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    padding-bottom: 0;
 }
 
 .hero-buttons {
@@ -1113,6 +1114,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
