@@ -270,19 +270,19 @@ header {
 /* Hero Section */
 .hero {
     margin-top: 70px;
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
 }
 
 .hero-text h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Hero Logo Image */
@@ -303,13 +303,13 @@ header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .hero-image {
@@ -966,6 +966,21 @@ footer::before {
             rgba(255, 255, 255, 0.98) 0%, 
             rgba(240, 248, 230, 0.95) 100%);
         backdrop-filter: blur(10px);
+    } 
+    .hero {
+        padding: 30px 0;
+    } 
+    .hero-content {
+        gap: 20px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
     }    
     .hero h1 {
         font-size: 2.5rem;
@@ -1098,6 +1113,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
