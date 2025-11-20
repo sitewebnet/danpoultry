@@ -361,58 +361,115 @@ document.querySelectorAll("form").forEach(form => {
         submitButton.disabled = false;
     });
 });
-
-// Phone number copy functionality
-const phoneElement = document.querySelector('.copy-phone');
-
-if (phoneElement) {
-    phoneElement.addEventListener('click', async function() {
-        const phoneNumber = '+254714634508'; // Plain number without spaces
-        
-        try {
-            // Modern Clipboard API approach
-            await navigator.clipboard.writeText(phoneNumber);
-            
-            // Show success feedback
-            this.classList.add('copied');
+// Phone number copy functionality - SIMPLIFIED WORKING VERSION
+function initializePhoneCopy() {
+    const phoneElement = document.querySelector('.copy-phone');
+    
+    if (phoneElement) {
+        phoneElement.addEventListener('click', function() {
+            const phoneNumber = '+254714634508';
             const tooltip = this.querySelector('.copy-tooltip');
+            
+            // Show copying feedback
             if (tooltip) {
-                tooltip.textContent = 'Copied!';
+                tooltip.textContent = 'Copying...';
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+                tooltip.style.backgroundColor = '#ffc107';
             }
             
-            // Reset after 2 seconds
-            setTimeout(() => {
-                this.classList.remove('copied');
-                if (tooltip) {
-                    tooltip.textContent = 'Click to copy';
-                }
-            }, 2000);
-            
-        } catch (err) {
-            // Fallback for older browsers
-            const tempInput = document.createElement('input');
-            tempInput.value = phoneNumber;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            
-            // Show feedback even with fallback
-            this.classList.add('copied');
-            const tooltip = this.querySelector('.copy-tooltip');
-            if (tooltip) {
-                tooltip.textContent = 'Copied!';
+            // Use modern Clipboard API first
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phoneNumber).then(() => {
+                    showCopySuccess(this, tooltip);
+                }).catch(() => {
+                    useFallbackCopy(phoneNumber, this, tooltip);
+                });
+            } else {
+                useFallbackCopy(phoneNumber, this, tooltip);
             }
-            
-            setTimeout(() => {
-                this.classList.remove('copied');
-                if (tooltip) {
-                    tooltip.textContent = 'Click to copy';
-                }
-            }, 2000);
-        }
-    });
+        });
+
+        // Show tooltip on hover
+        phoneElement.addEventListener('mouseenter', function() {
+            const tooltip = this.querySelector('.copy-tooltip');
+            if (tooltip && !this.classList.contains('copied')) {
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+            }
+        });
+
+        phoneElement.addEventListener('mouseleave', function() {
+            const tooltip = this.querySelector('.copy-tooltip');
+            if (tooltip && !this.classList.contains('copied')) {
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            }
+        });
+    }
 }
+
+function useFallbackCopy(phoneNumber, element, tooltip) {
+    // Fallback method
+    const tempInput = document.createElement('input');
+    tempInput.value = phoneNumber;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999);
+    
+    try {
+        const successful = document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        
+        if (successful) {
+            showCopySuccess(element, tooltip);
+        } else {
+            showCopyError(element, tooltip);
+        }
+    } catch (err) {
+        document.body.removeChild(tempInput);
+        showCopyError(element, tooltip);
+    }
+}
+
+function showCopySuccess(element, tooltip) {
+    element.classList.add('copied');
+    
+    if (tooltip) {
+        tooltip.textContent = 'Copied!';
+        tooltip.style.backgroundColor = '#28a745';
+        tooltip.style.visibility = 'visible';
+        tooltip.style.opacity = '1';
+    }
+    
+    setTimeout(() => {
+        element.classList.remove('copied');
+        if (tooltip) {
+            tooltip.textContent = 'Click to copy';
+            tooltip.style.backgroundColor = 'var(--dark)';
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        }
+    }, 2000);
+}
+
+function showCopyError(element, tooltip) {
+    if (tooltip) {
+        tooltip.textContent = 'Failed to copy';
+        tooltip.style.backgroundColor = '#dc3545';
+        
+        setTimeout(() => {
+            tooltip.textContent = 'Click to copy';
+            tooltip.style.backgroundColor = 'var(--dark)';
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        }, 2000);
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initializePhoneCopy);
+
 
 // Prevent right-click and view source
 document.addEventListener("contextmenu", function(e) {
@@ -439,3 +496,4 @@ window.addEventListener('resize', function() {
         navLinks.classList.remove('active');
     }
 });
+
