@@ -31,14 +31,13 @@ body {
     position: relative;
 }
 
-/* Animated gradient background */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Add subtle pattern overlay */
+/* Subtle pattern overlay */
 body::before {
     content: '';
     position: fixed;
@@ -65,7 +64,6 @@ section {
     position: relative;
 }
 
-/* Add subtle section backgrounds with artistic touches */
 .hero {
     background: linear-gradient(135deg, 
         rgba(240, 248, 230, 0.9) 0%, 
@@ -227,14 +225,14 @@ header {
     position: relative;
 }
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1002; /* Higher z-index */
+    z-index: 1002; 
     background: transparent;
     border: none;
     padding: 5px;
@@ -345,7 +343,7 @@ header {
         0 0 0 1px rgba(212, 175, 55, 0.2);
     background: linear-gradient(135deg, #f0f8e6, #e8f5e8);
     padding: 10px;
-    max-width: 400px; /* Perfect for portrait */
+    max-width: 400px;
     margin: 0 auto;   
 }
 
@@ -1324,6 +1322,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
