@@ -977,6 +977,64 @@ footer::before {
     position: relative;
     z-index: 1;
 }
+.copy-phone {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-phone:hover {
+    color: var(--primary);
+}
+
+.copy-tooltip {
+    visibility: hidden;
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.copy-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--dark) transparent transparent transparent;
+}
+
+.copy-phone:hover .copy-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Copy feedback animation */
+.copy-phone.copied {
+    color: #28a745;
+}
+
+.copy-phone.copied .copy-tooltip {
+    background-color: #28a745;
+    content: "Copied!";
+}
+
+.copy-phone.copied .copy-tooltip::after {
+    border-color: #28a745 transparent transparent transparent;
+}
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -1265,6 +1323,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
