@@ -209,7 +209,7 @@ p {
 header {
     background: linear-gradient(135deg, 
         rgba(255, 255, 255, 0.95) 0%, 
-        rgba(240, 248, 230, 0.9) 100%);
+        rgba(90, 140, 66, 0.9) 100%);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -223,7 +223,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
+    position: relative;
+}
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002; /* Higher z-index */
+    background: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    margin: 3px 0;
+    transition: var(--transition);
+    display: block;
 }
 
 .logo {
@@ -894,8 +917,8 @@ footer::before {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        padding: 15px 0;
+        flex-direction: row;
+        padding: 12px 0;
         position: relative;
     }
     
@@ -906,7 +929,7 @@ footer::before {
         width: 100%;
         background: linear-gradient(135deg, 
             rgba(255, 255, 255, 0.98) 0%, 
-            rgba(240, 248, 230, 0.95) 100%);
+            rgba(90, 140, 66, 0.95) 100%);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -915,7 +938,7 @@ footer::before {
         display: none;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-top: 1px solid rgba(212, 175, 55, 0.2);
-        z-index: 1000;
+        z-index: 1001;
     }
     
     .nav-links.active {
@@ -924,7 +947,7 @@ footer::before {
     }
     
     .nav-links li {
-        margin: 10px 0;
+        margin: 8px 0;
         width: 100%;
         text-align: center;        
     }
@@ -968,6 +991,7 @@ footer::before {
             rgba(255, 255, 255, 0.98) 0%, 
             rgba(240, 248, 230, 0.95) 100%);
         backdrop-filter: blur(10px);
+        
     } 
     .hero {
         padding: 30px 0;
@@ -1073,6 +1097,7 @@ footer::before {
     
     .hamburger {
         transform: scale(0.9);
+        right: 10px;
     }    
     .hero {
         padding: 40px 0;
@@ -1115,6 +1140,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
