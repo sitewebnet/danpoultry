@@ -362,6 +362,58 @@ document.querySelectorAll("form").forEach(form => {
     });
 });
 
+// Phone number copy functionality
+const phoneElement = document.querySelector('.copy-phone');
+
+if (phoneElement) {
+    phoneElement.addEventListener('click', async function() {
+        const phoneNumber = '+254714634508'; // Plain number without spaces
+        
+        try {
+            // Modern Clipboard API approach
+            await navigator.clipboard.writeText(phoneNumber);
+            
+            // Show success feedback
+            this.classList.add('copied');
+            const tooltip = this.querySelector('.copy-tooltip');
+            if (tooltip) {
+                tooltip.textContent = 'Copied!';
+            }
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                this.classList.remove('copied');
+                if (tooltip) {
+                    tooltip.textContent = 'Click to copy';
+                }
+            }, 2000);
+            
+        } catch (err) {
+            // Fallback for older browsers
+            const tempInput = document.createElement('input');
+            tempInput.value = phoneNumber;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            // Show feedback even with fallback
+            this.classList.add('copied');
+            const tooltip = this.querySelector('.copy-tooltip');
+            if (tooltip) {
+                tooltip.textContent = 'Copied!';
+            }
+            
+            setTimeout(() => {
+                this.classList.remove('copied');
+                if (tooltip) {
+                    tooltip.textContent = 'Click to copy';
+                }
+            }, 2000);
+        }
+    });
+}
+
 // Prevent right-click and view source
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
