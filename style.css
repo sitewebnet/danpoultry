@@ -320,6 +320,8 @@ header {
         0 0 0 1px rgba(212, 175, 55, 0.2);
     background: linear-gradient(135deg, #f0f8e6, #e8f5e8);
     padding: 10px;
+    max-width: 400px; /* Perfect for portrait */
+    margin: 0 auto;   
 }
 
 .hero-image img {
@@ -1096,6 +1098,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
