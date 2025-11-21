@@ -1,21 +1,86 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
-  "icons": [
-    {
-      "src": "/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+    "name": "Kimchick Ukulima Ventures | Improved Kienyeji Chicks Supplier Nakuru",
+    "short_name": "Kienyeji Chicks Kenya",
+    "description": "Leading supplier of improved kienyeji chicks in Kenya. Quality day-old kienyeji chickens, professional incubation services, brooding & poultry farming support in Njoro, Nakuru County. Get vaccinated improved kienyeji chicks for better profits.",
+    "icons": [
+        {
+            "src": "/images/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "theme_color": "#4a7232",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "orientation": "any",
+    "categories": ["business", "agriculture", "animals", "shopping"],
+    "screenshots": [
+        {
+            "src": "/images/og-image.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Improved Kienyeji Chicks from Kimchick Ventures"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Improved Kienyeji Chicks Price",
+            "short_name": "Kienyeji Price",
+            "description": "Check prices for improved kienyeji day-old chicks",
+            "url": "/#forms?type=kienyeji-chicks",
+            "icons": [
+                {
+                    "src": "/images/web-app-manifest-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Kienyeji Egg Incubation",
+            "short_name": "Kienyeji Eggs",
+            "description": "Professional incubation for kienyeji chicken eggs",
+            "url": "/#forms?type=kienyeji-incubation",
+            "icons": [
+                {
+                    "src": "/images/web-app-manifest-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Kienyeji Farming Guide",
+            "short_name": "Kienyeji Guide", 
+            "description": "Learn improved kienyeji poultry farming techniques",
+            "url": "/#services",
+            "icons": [
+                {
+                    "src": "/images/web-app-manifest-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "lang": "en-US",
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "related_applications": []
 }
