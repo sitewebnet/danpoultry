@@ -106,10 +106,27 @@
     align-items: center;
     padding-top: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.blog-meta-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .blog-date {
     color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blog-author {
+    color: var(--primary);
+    font-weight: 600;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
