@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Blog page loaded');
     
-    // Add smooth hover effects to blog cards
     const blogCards = document.querySelectorAll('.blog-card');
     
     blogCards.forEach(card => {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add topic hover effects
     const topics = document.querySelectorAll('.topic');
     
     topics.forEach(topic => {
@@ -31,17 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Blog card click handler (optional)
     blogCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // Don't trigger if clicking on links
             if (e.target.tagName === 'A' || e.target.closest('a')) {
                 return;
             }
             
             const link = this.querySelector('.blog-title a');
             if (link) {
-                // Open in new tab
                 window.open(link.href, '_blank');
             }
         });
