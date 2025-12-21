@@ -13,12 +13,6 @@
             "src": "/images/web-app-manifest-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/images/web-app-manifest-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
             "purpose": "maskable"
         }
     ],
@@ -28,57 +22,7 @@
     "scope": "/",
     "start_url": "/",
     "orientation": "any",
-    "categories": ["business", "agriculture", "animals", "shopping"],
-    "screenshots": [
-        {
-            "src": "/images/og-image.png",
-            "sizes": "1280x720",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Improved Kienyeji Chicks from Kimchick Ventures"
-        }
-    ],
-    "shortcuts": [
-        {
-            "name": "Improved Kienyeji Chicks Price",
-            "short_name": "Kienyeji Price",
-            "description": "Check prices for improved kienyeji day-old chicks",
-            "url": "/#forms?type=kienyeji-chicks",
-            "icons": [
-                {
-                    "src": "/images/web-app-manifest-96x96.png",
-                    "sizes": "96x96",
-                    "type": "image/png"
-                }
-            ]
-        },
-        {
-            "name": "Kienyeji Egg Incubation",
-            "short_name": "Kienyeji Eggs",
-            "description": "Professional incubation for kienyeji chicken eggs",
-            "url": "/#forms?type=kienyeji-incubation",
-            "icons": [
-                {
-                    "src": "/images/web-app-manifest-96x96.png",
-                    "sizes": "96x96",
-                    "type": "image/png"
-                }
-            ]
-        },
-        {
-            "name": "Kienyeji Farming Guide",
-            "short_name": "Kienyeji Guide", 
-            "description": "Learn improved kienyeji poultry farming techniques",
-            "url": "/#services",
-            "icons": [
-                {
-                    "src": "/images/web-app-manifest-96x96.png",
-                    "sizes": "96x96",
-                    "type": "image/png"
-                }
-            ]
-        }
-    ],
+    "categories": ["business", "agriculture", "animals", "shopping", "Chicken", "Chicks", "eggs", "Incubation", "Brooding"],
     "lang": "en-US",
     "dir": "ltr",
     "prefer_related_applications": false,
