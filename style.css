@@ -1034,7 +1034,31 @@ footer::before {
 .copy-phone.copied .copy-tooltip::after {
     border-color: #28a745 transparent transparent transparent;
 }
+.whatsapp-float {
+    position: fixed; 
+    top: 75%;
+    right: 20px;     
+    background-color: #25d366; 
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: 1000;   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+.whatsapp-float:hover {
+    background-color: #1DA851;
+    transform: scale(1.1);
+}
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero-content {
@@ -1322,6 +1346,7 @@ footer::before {
         margin-right: 5px;
     }   
 }
+
 
 
 
